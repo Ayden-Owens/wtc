@@ -1,0 +1,52 @@
+h-header {
+  display: flex;
+  padding: 1.5vw;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.5vw;
+  font-family: 'Brush Script Std';
+  justify-content: left;
+  margin-right: auto;
+  color: #3f618c;
+  outline-color: black;
+}
+
+.home-navbar {
+  align-items: center;
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 2;
+  justify-content: right;
+}
+
+.home-list a:hover {
+  color: #3f618c;
+}
+
+.home-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.section-right {
+  font-family: 'Brush Script Std';
+  text-align: right;
+  text-decoration: none;
+  white-space: nowrap;
+  width: 100%;
+  color: white;
+  font-style: italic;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+}

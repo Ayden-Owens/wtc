@@ -1,0 +1,807 @@
+.Profile-Page{
+    background-color: tan;
+}
+
+#profile-title{
+    text-align: center;
+    color: white;
+    font-family: 'Brush Script Std';
+    font-style: italic;
+    font-size: 4vh;
+}
+
+.Profile-Card {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #8cbed2;
+    /* background-color: white; */
+}
+
+.Profile-Picture {
+    position: relative;
+    margin: 5%;
+}
+
+.default,
+.profile-pic {
+    width: 100%; /* Adjust the size as needed */
+    height: 100%; /* Maintain the aspect ratio */
+    border-radius: 50%;
+    object-fit: cover; /* Ensure the image covers the circular area */
+    border: 1px solid black;
+}
+
+.picture-icon {
+    width: 20%; /* Adjust the size as needed */
+    height: 20%; /* Maintain the aspect ratio */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: cyan;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+  
+.Profile-Picture button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#p-password {
+    border-radius: 10px;
+    font-family: 'Brush Script Std';
+    color: white;
+    background-color: black;
+    font-style: italic;
+    cursor: pointer;
+    font-family: 'Brush Script Std';
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 5vh;
+    margin-bottom: 2%;
+    font-size: 3vh;
+}
+
+.card-content{
+    margin: 10%;
+}
+
+.card-content p{
+    font-family: 'Brush Script Std';
+    font-size: 2.5vh;
+}
+  
+.upload-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+  
+.upload-modal input[type="file"] {
+    margin-bottom: 10px;
+}  
+
+.preview-image {
+    max-width: 100%;
+    max-height: 200px;
+    margin-top: 10px;
+}
+
+.upload-modal-content {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-modal input[type="file"] {
+    display: none;
+}
+
+.pic-upload,
+.pic-cancel,
+.file-input-button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: lightseagreen;
+  font-family: 'Brush Script Std';
+  font-style: italic;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
+
+.pic-cancel {
+    margin-top: 5px;
+    background-color: #e74c3c;
+}
+
+.Meal-of-Week {
+    background-color: #8cbed2;
+    width: 93%;
+    height: 66%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+    border: 2px solid black; /* Increase the border thickness to 3px */
+}
+  
+.Meal-of-Week-header {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.Meal-of-Week-header h2{
+    font-size: 24px;
+    margin-right: 5%;
+    font-family: 'Brush Script Std';
+    font-style: italic;
+}
+
+#Meal-of-Week-arrow {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    margin-top: 15px;
+} 
+
+.Meal-of-Week-header img {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.recipe-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.recipe-img {
+    width: 100%; 
+    height: 90%;
+    margin-bottom: 2%; 
+    object-fit: fill;
+}
+
+#recipeofweek_title {
+    font-size: 2.5vh;
+    text-align: center;
+    font-family: 'Brush Script Std';
+    font-style: italic;
+    font-weight: bold;
+}
+
+.budget-container{
+    height: 25%;
+    width: 93%;
+    background-color: #8cbed2;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+#budget-input{
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.budget-header{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.budget-header h2{
+    font-size: 24px;
+    margin-right: 10px;
+    font-family: 'Brush Script Std';
+    font-weight: 50px;
+    font-style: italic;
+}
+
+#budget-arrow{
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    margin-top: 25px;
+}
+
+#budget-button{
+    width: 50px;
+    margin-left: auto;
+    font-family: 'Brush Script Std';
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    font-style: italic;
+    border-radius: 2px;
+}
+
+.budget-buttons{
+    font-family: 'Brush Script Std';
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    font-style: italic;
+    border-radius: 2px; 
+    margin-right: 10px;
+}
+
+.profile-panel-section{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.Left-Panel {
+    background-color: white; 
+    height: 40%;
+    width: 40%;
+    gap: 2%;
+    border: 1.5px solid black; /* Increase the border thickness to 3px */
+    border-radius: 15px; /* Add border-radius for rounded corners */
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    display: flex;
+    justify-content: space-between; /* Add space between Profile-Card and Meal-of-Week */
+    padding: 20px;
+}
+
+/* Favorite Section */
+
+.favorite-section{
+    background-color: #8cbed2;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    height: auto;
+    width: 98%;
+}
+
+#bookmark-title {
+    font-size: 32px;
+    margin-top: 0px;
+    font-style: italic;
+}
+
+.recipe-list{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    height: 350px;
+    width: 98%;
+    scroll-behavior: smooth;
+    padding: 1%;
+}
+
+.recipe-list::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+
+.recipe-list::-webkit-scrollbar-track {
+    border-radius: 10px; /* Rounded corners for the track */
+    background-color: #f1f1f1; /* Track color */
+}
+
+.recipe-list::-webkit-scrollbar-thumb {
+    border-radius: 10px; /* Rounded corners for the thumb */
+    background-color: #888; /* Thumb color */
+}
+
+.recipe-list::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Thumb color on hover */
+}
+
+.favorite-recipe{
+    background-color: lightgrey;
+    height: 320px;
+    width: 240px;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+
+.fav_recipe_image {
+    width: 100%; /* Make the image fill its container */
+    width: 240px;
+    height: 80%; /* Adjust the height as needed */
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+    border-top-left-radius: 10px; /* Round top-left corner */
+    border-top-right-radius: 10px; /* Round top-right corner */
+    /* border-bottom: 2px solid black; */
+}
+
+.fav_recipe_image:hover {
+    cursor: pointer;
+}
+
+.recipe-info{
+    display: flex;
+    align-items: center;
+}
+
+.recipe-info p{
+    font-size: 15px;
+    margin-left: 5px;
+    align-self: center;
+    width: 200px;
+    height: 40px;
+    font-style: italic;
+}
+
+.bookmark_icon{
+    margin-left: 16px;
+    width: 0;
+    height: 0;
+    border-top: 14px solid blue;
+    border-right: 7.5px solid blue;
+    border-bottom: 7.5px solid transparent;
+    border-left: 7.5px solid blue;
+    cursor: pointer;
+    margin-top: -8%;
+}
+
+.Right-Panel{
+    height: 10%;
+    width: 55%;
+    background-color: white; 
+    border: 1.5px solid black; /* Increase the border thickness to 3px */
+    border-radius: 15px; /* Add border-radius for rounded corners */
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    display: flex;
+    justify-content: space-between; /* Add space between Profile-Card and Meal-of-Week */
+    padding: 20px;
+}
+
+.middle-section,
+.top-section {
+    padding: 10px;
+    font-family: 'Brush Script Std';
+    flex-direction: row; /* Add this line */
+}
+
+.middle-section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; /* Add this line */
+    margin-top: 40px;
+    font-family: 'Brush Script MT', 'Brush Script Std';
+    margin-bottom: 30px;
+    gap: 1%;
+}
+
+.top-section{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5%;
+}
+
+.R-Panel{
+    position: relative;
+    background-color: white;
+    height: 475px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+}
+
+.R-Panel h1{
+    font-family: 'Brush Script Std';
+    font-style: italic;
+    font-size: 36px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.R_Fridge_container{
+    background-color: #8cd2a0;
+    border: 2px solid black;
+    height: 465px;
+    width: 99.6%;
+    border-radius: 10px;
+}
+
+/* vapor */
+/* .vapor1 {
+    position: absolute;
+    top: 20px;
+    left: 475px;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.vapor2 {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+    transform: rotate(45deg);
+}
+
+.vapor3 {
+    position: absolute;
+    top: 0;
+    left: 500px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    padding: 0 20px;
+    transform: rotate(-45deg);
+}
+
+.vapor1 span{
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.5s);
+    z-index: 1;
+}
+
+.vapor2 span{
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.5s);
+    z-index: 1;
+}
+
+.vapor3 span {
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.5s);
+    z-index: 1;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scaleX(1);
+    }
+    15% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(150px) scaleX(5);
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(300px) scaleX(10);
+    }
+} */
+
+.ingredient-item li{
+    background-color: white;
+    width: 15%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    list-style-type: none;
+    font-weight: 100;
+    margin-bottom: 10px;
+    font-size: 2.5vh;
+    z-index: 2;
+    border: 1px solid black;
+}
+
+.ingredient-item{
+    padding: 10px;
+    height: 150px;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1%;  
+    font-family: 'Brush Script Std';
+    font-size: 15px;
+    color: black;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.ingredient-item button{
+    font-family: 'Brush Script Std';
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 2.2vh;
+    font-style: italic;
+    width: 60%;
+    height: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.saved-item {
+    overflow-y: auto;
+    height: 380px;
+    width: 100%;
+}
+
+.saved-item::-webkit-scrollbar{
+    width: 11.5px;
+    height: 6px;
+}
+
+.saved-item::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Track color */
+    border-radius: 10px;
+}
+
+.saved-item::-webkit-scrollbar-thumb {
+    background-color: #888; /* Thumb color */
+    border-radius: 10px;
+    height: 5px;
+    width: 10px;
+}
+
+.saved-item::-webkit-scrollbar-thumb:hover {
+    background-color: black; /* Thumb color on hover */
+}
+
+.add-items button{
+    font-family: 'Brush Script MT', 'Brush Script Std';
+    border-radius: 5px;
+    width: 150px;
+    z-index: 2;
+}
+
+/* .add-items h3{  
+    color: white;
+    font-family: 'Brush Script MT', 'Brush Script Std';
+    font-size: 25px;
+    font-weight: 100;
+} */
+
+.add-items{  
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.add-items-input{  
+    margin-top: -10px;
+    width: 100%;
+    font-size: 90%;
+    margin-left: 15px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.ingredient-modal {
+    position: fixed;
+    padding: 1%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.L-Panel{
+    height: auto;
+    width: 15%;
+    background-color: red;
+}
+
+.Fridge {
+    background-color: #8cd2a0;
+    padding: 10px;
+    border-radius: 10px;
+    width: 15%;
+    height: 89%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    border: 1px solid black;
+}
+
+.top-fridge {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: auto;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.t-thin-handle {
+    background-color: black;
+    padding: 5px; /* Adjust the padding as needed */
+    border-radius: 5px; /* Adjust the border-radius as needed */
+    width: 2px; /* Adjust the width as needed */
+    height: 90px; /* Adjust the height as needed */
+    position: absolute; /* Position it on top of the t-handle */
+    cursor: pointer;
+}
+
+.b-thin-handle {
+    z-index: 1;
+    background-color: black;
+    padding: 5px; /* Adjust the padding as needed */
+    border-radius: 5px; /* Adjust the border-radius as needed */
+    width: 2px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    position: absolute; /* Position it on top of the t-handle */
+}
+
+/* .b-thin-handle:hover {
+    display: none;
+} */
+
+.bottom-fridge {
+    margin-top: 10px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 89%;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    position: relative;
+}
+
+.bottom-mini-fridge{
+    overflow-y: auto;
+    height: 300px;
+    width: auto;
+    direction: rtl;
+    padding-right: 10%;
+}
+
+.bottom-mini-fridge::-webkit-scrollbar {
+    width: 12px; 
+    height: 8px; 
+}
+
+/* Style the scrollbar track */
+.bottom-mini-fridge::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Track color */
+    border-radius: 10px; 
+}
+
+/* Style the scrollbar thumb */
+.bottom-mini-fridge::-webkit-scrollbar-thumb {
+    background-color: black; /* Thumb color */
+    border-radius: 10px; 
+    width: 12px;
+    height: 100px !important;
+}
+
+.bottom-fridge ul {
+    list-style: none;
+    font-family: 'Brush Script Std';
+    font-size: 15px;
+    cursor: pointer;
+    direction: ltr;
+}
+
+.error-modal{
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #ff0000;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.error-modal-content{
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Brush Script Std';
+}
+
+.modal-content{
+    color: black;
+    font-size: 25px;
+    font-family: 'Brush Script Std';
+}
+
+.modal-content button{
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    font-family: 'Brush Script Std';
+    background-color: black;
+}

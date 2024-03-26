@@ -1,0 +1,22 @@
+/* Styles for the search result container */
+.search-results {
+    margin-top: 10px; /* Adjust margin-top as needed */
+  }
+  
+  /* Styles for the search result button */
+  .search-result-button {
+    padding: 10px; /* Adjust padding as needed */
+    margin-bottom: 5px; /* Adjust margin-bottom as needed */
+    width: 300px; /* Adjust width as needed */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Border radius */
+    font-size: 16px; /* Font size */
+    background-color: #fff; /* Button background color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  /* Styles for the search result button on hover */
+  .search-result-button:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+  }
+  

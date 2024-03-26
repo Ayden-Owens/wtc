@@ -1,0 +1,152 @@
+.recipe_page{
+    background-color: #d2b48c;
+}
+
+.library-list {
+    display: flex;
+    overflow-x: auto; /* Add horizontal scrollbar when needed */
+}
+
+.library-item img{
+    width: 100px;
+    height: 100px;
+}
+
+.library-item {
+    margin-right: 20px;
+    background-color: white;
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+}
+
+
+.recipe-whole-list{
+    list-style: none;
+    padding-left: 0;
+    margin-left: 10px;
+}
+
+.recipe-full-space{
+    list-style: none;
+    background-color: #fe8552;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.recipe-title-search{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: default;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+}
+.recipe-title {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    /* color: #114494; */
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+}
+.separation-line-recipe-to-instructions{
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid #ffff;
+    margin: auto;
+    margin-top: 10px;
+}
+.instructions {
+    color: #000000;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.more-less-button{
+    color: blue; /* Set text color to blue */
+    text-decoration: underline; /* Add underline to text */
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Optional: Style hover effect */
+.more-less-button:hover {
+color: darkblue; /* Darken text color on hover */
+}
+
+.bookmark-button{
+    transform-origin: top left;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.bookmark-icon{
+    height: 40px;
+    width: 40px;
+    transform-origin: top left;
+    background-color: #ffffff00;
+}
+
+.estimated-time-text{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+}
+.estimated-time-time{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 50px;
+    background-color: #fe5275;
+    border: none;
+    color: #000;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
+
+/* Styles for the search result container */
+.search-results-container {
+    background-color: #ccccccd3;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 200px;
+    overflow-y: auto;
+    
+}
+.search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for the search result button */
+.search-result-button {
+    padding: 10px; /* Adjust padding as needed */
+    margin-bottom: 5px; /* Adjust margin-bottom as needed */
+    width: 300px; /* Adjust width as needed */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Border radius */
+    font-size: 16px; /* Font size */
+    background-color: #fff; /* Button background color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Styles for the search result button on hover */
+.search-result-button:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
