@@ -55,7 +55,8 @@ const Register = () => {
   }, []);
 
   const handleRegistration = async () => {
-    const API = 'http://localhost:3000';
+    const API = 'https://whattocookapp-ed9fe9a2a3d4.herokuapp.com/'
+    // const API = "http://localhost:3000"
 
     try {
       const response = await Axios.post(

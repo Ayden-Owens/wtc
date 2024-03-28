@@ -23,6 +23,9 @@ const { error } = require("console");
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
+const API = 'https://whattocookapp-ed9fe9a2a3d4.herokuapp.com/'
+// const API = "http://localhost:3000"
+
 // Register a new user
 router.post("/register", async (req, res) => {
   const { username, email, password } = req.body;
@@ -534,7 +537,7 @@ router.get("/favorite_recipe", authenticate, async (req, res) => {
       return {
         id,
         title,
-        image: image ? `http://localhost:3000/recipe_images/${image}` : null,
+        image: image ? `${API}/recipe_images/${image}` : null,
       };
     });
 

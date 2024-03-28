@@ -41,7 +41,8 @@ const Profile = ( { onRecipeSelect } ) => {
   const [errorMessage, setErrorMessage] = useState("");
   const modalDisplayDuration = 3000; // Duration in milliseconds
 
-  const API = "http://localhost:3000"
+  const API = 'https://whattocookapp-ed9fe9a2a3d4.herokuapp.com'
+  // const API = "http://localhost:3000"
 
   const displayErrorModal = (message) => {
     setErrorMessage(message);
@@ -414,7 +415,7 @@ const Profile = ( { onRecipeSelect } ) => {
               {profilePictureURL ? ( 
                 <img 
                   className="profile-pic"
-                  src={`http://localhost:3000/uploads/${profilePictureURL}`} 
+                  src={`${API}/uploads/${profilePictureURL}`} 
                   alt="Profile"
                 />
               ) : (

@@ -11,8 +11,11 @@ const DietaryRestrictions = () => {
   const [selectedRestrictions, setSelectedRestrictions] = useState([]);
   const [userHealthLabels, setUserHealthLabels] = useState([]);
 
+  const API = 'https://whattocookapp-ed9fe9a2a3d4.herokuapp.com/'
+  // const API = "http://localhost:3000"
+
   useEffect(() => {
-    Axios.get("http://localhost:3000/users/healthlabels")
+    Axios.get(API+"users/healthlabels")
       .then((response) => {
         const filteredLabels = response.data.labels.filter(
           (label) => label !== "DASH"
@@ -39,7 +42,7 @@ const DietaryRestrictions = () => {
       const authToken = Cookies.get("userToken");
 
       const response = await Axios.get(
-        "http://localhost:3000/users/healthlabels_ids",
+        API+"users/healthlabels_ids",
         {
           params: { selectedRestrictions: selectedRestrictions.join(",") },
           withCredentials: true,
@@ -54,7 +57,7 @@ const DietaryRestrictions = () => {
       console.log("Health Label IDs:", healthLabelIds);
 
       await Axios.post(
-        "http://localhost:3000/users/dietary_restrictions",
+        API+"users/dietary_restrictions",
         { selectedRestrictions: healthLabelIds },
         {
           withCredentials: true,
@@ -72,7 +75,7 @@ const DietaryRestrictions = () => {
   };
 
   useEffect(() => {
-    Axios.get("http://localhost:3000/users/user_healthlabels", {
+    Axios.get(API+"users/user_healthlabels", {
       withCredentials: true,
       headers: {
         Authorization: `Bearer ${Cookies.get("userToken")}`,

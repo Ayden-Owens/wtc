@@ -12,9 +12,12 @@ function Contact() {
   const [subject, setSubject] = useState('');
   const [text, setText] = useState('');
 
+  const API = 'https://whattocookapp-ed9fe9a2a3d4.herokuapp.com/'
+  // const API = "http://localhost:3000"
+
   const submitForm = async () => {
     try {
-      await fetch('http://localhost:3000/contactus', {
+      await fetch(API+'contactus', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',

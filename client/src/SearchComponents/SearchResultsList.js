@@ -13,6 +13,9 @@ export const SearchResultsList = ({ results, inputValue, onIngredientSelect, isT
   const [hasMatchingRecipes, setHasMatchingRecipes] = useState(false); // Track if any matching recipes were found
   const [showOnFocus, setShowOnFocus] = useState(false);
 
+  const API = 'https://whattocookapp-ed9fe9a2a3d4.herokuapp.com'
+  // const API = "http://localhost:3000"
+
   const handleButtonClick = (recipeName) => {
     setShowSearchResult(true);
     setRecipeToShow(recipeName);
@@ -34,7 +37,7 @@ export const SearchResultsList = ({ results, inputValue, onIngredientSelect, isT
   const isBookmark = async (recipeID) => {
     try {
       const response = await Axios.post(
-        "http://localhost:3000/users/isBookmarked",
+        API+"/users/isBookmarked",
         {
           data: { recipeID },
         },
@@ -58,7 +61,7 @@ export const SearchResultsList = ({ results, inputValue, onIngredientSelect, isT
 
       if (!isCurrentlyBookmarked) {
         await Axios.post(
-          "http://localhost:3000/users/bookmark_recipe",
+          API+"/users/bookmark_recipe",
           {
             data: { recipeID },
           },
@@ -72,7 +75,7 @@ export const SearchResultsList = ({ results, inputValue, onIngredientSelect, isT
         console.log("Recipe bookmarked successfully!");
       } else {
         await Axios.post(
-          "http://localhost:3000/users/unbookmark_recipe",
+          API+"/users/unbookmark_recipe",
           {
             data: { recipeID },
           },
@@ -165,7 +168,7 @@ export const SearchResultsList = ({ results, inputValue, onIngredientSelect, isT
                       <React.Fragment key={idx}>
                         {idx > 0 && ", "}
                         {<Link
-                          to="http://localhost:3001/PriceComparer"
+                          to="/PriceComparer"
                           onClick={() => handleIngredientClick(ingredient)}>
                           {ingredient}
                         </Link>}

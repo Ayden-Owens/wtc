@@ -19,10 +19,13 @@ export const RecipeGenerator = ({ onIngredientSelect, selectedRecipe }) => {
 
   const [allRecipes, setAllRecipes] = useState([]);
 
+  const API = 'https://whattocookapp-ed9fe9a2a3d4.herokuapp.com'
+  // const API = "http://localhost:3000"
+
   useEffect(() => {
     const fetchLibrary = async () => {
       try {
-        const response = await Axios.get("http://localhost:3000/recipe/library", {
+        const response = await Axios.get(API+"/recipe/library", {
           withCredentials: true,
           headers: {
             Authorization: `Bearer ${Cookies.get("userToken")}`,
@@ -41,7 +44,7 @@ export const RecipeGenerator = ({ onIngredientSelect, selectedRecipe }) => {
   const fetchData = async () => {
     try {
       const responseData = await Axios.get(
-        "http://localhost:3000/recipe/recipesIngredient",
+        API+"/recipe/recipesIngredient",
         {
           withCredentials: true,
           headers: {
@@ -126,7 +129,7 @@ export const RecipeGenerator = ({ onIngredientSelect, selectedRecipe }) => {
   const isBookmark = async (recipeID) => {
     try {
       const response = await Axios.post(
-        "http://localhost:3000/users/isBookmarked",
+        API+"/users/isBookmarked",
         {
           data: { recipeID },
         },
@@ -152,7 +155,7 @@ export const RecipeGenerator = ({ onIngredientSelect, selectedRecipe }) => {
       
       if (!isCurrentlyBookmarked) {
         await Axios.post(
-          "http://localhost:3000/users/bookmark_recipe",
+          API+"/users/bookmark_recipe",
           {
             data: { recipeID },
           },
@@ -166,7 +169,7 @@ export const RecipeGenerator = ({ onIngredientSelect, selectedRecipe }) => {
         console.log("Recipe bookmarked successfully!");
       } else {
         await Axios.post(
-          "http://localhost:3000/users/unbookmark_recipe",
+          API+"/users/unbookmark_recipe",
           {
             data: { recipeID },
           },
@@ -250,7 +253,7 @@ export const RecipeGenerator = ({ onIngredientSelect, selectedRecipe }) => {
             <div className="library-list">
               {allRecipes.map((recipe, index) => (
                 <div key={index} className="library-item">
-                  <img src={`http://localhost:3000/recipe_images/${recipe.image}`} alt={recipe.recipeName} />
+                  <img src={`${API}/recipe_images/${recipe.image}`} alt={recipe.recipeName} />
                   <h3>{recipe.recipeName}</h3>
                 </div>
               ))}

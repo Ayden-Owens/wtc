@@ -56,8 +56,8 @@ const Login = () => {
 
     const handleLogin = async () => {
 
-        // const API_BASE_URL = 'https://www.whattocook.cc'
-        const API = "http://localhost:3000"
+        const API = 'https://whattocookapp-ed9fe9a2a3d4.herokuapp.com/'
+        // const API = "http://localhost:3000"
     
 
         if (!usernameLog || !passwordLog) {
